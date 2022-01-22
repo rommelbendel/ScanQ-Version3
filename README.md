@@ -11,5 +11,5 @@ Mit ScanQ verfolgen wir das Ziel der Entwicklung einer App zur Maximierung der E
 Durch diese Features möchten wir für unsere Benutzer das Üben neuer Vokabeln zum Vergnügen machen. Hierbei steht die Benutzerfreundlichkeit für uns an oberster Stelle, weswegen eine einfache, intuitive und moderne Bedienoberfläche, sowie eine spielerische Wettbewerbsumgebung  für mehr Spaß beim Lernen sorgen.</br>
 Die Notwendigkeit hierfür wird durch Forschungsergebnisse begründet, die belegen, dass stumpfsinniges Auswendiglernen für dauerhaftem Lernerfolg kontraproduktiv ist. Denn hierbei gelangen die Inhalte nicht in das Langzeitgedächtnis.</br></br>
 
-Hierbei handelt es sich um unseren ersten voll funktionsfähigen Entwurf der App.
+Bei diesem Repository handelt es sich um unseren die aktuelle Version der App, beschränkt auf wesentliche Dateien, wie Java-Klassen und XML-Dokumente. 
 
