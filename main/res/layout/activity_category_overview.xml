@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_5_percent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_5_percent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_95_percent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_50_percent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_50_percent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAlignment="center"
+        android:text="@string/daten_werden_geladen"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/loadingSymbol"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="323dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_50_percent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/topic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_5_percent"
+        app:layout_constraintLeft_toRightOf="@id/vertical_5_percent"
+        app:layout_constraintRight_toLeftOf="@id/vertical_95_percent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="@string/waehle_eine_kategorie"
+            android:textSize="32sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="15dp"/>
+
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/categorySelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingBottom="10dp">
+
+            </LinearLayout>
+
+        </ScrollView>-->
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/topic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="45dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/addButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintRight_toLeftOf="@id/vertical_95_percent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="21dp"
+        app:lottie_rawRes="@raw/add_circle"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/bmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/vertical_95_percent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="19.2dp"
+        android:layout_marginEnd="1.6dp"
+        app:bmb_buttonEnum="ham"
+        app:bmb_hamWidth="0dp"
+        app:bmb_piecePlaceEnum="piecePlace_ham_3"
+        app:bmb_buttonPlaceEnum="buttonPlace_ham_3"
+        app:bmb_normalColor="@android:color/transparent"
+        app:bmb_shadowRadius="0dp"
+        app:bmb_backgroundEffect="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

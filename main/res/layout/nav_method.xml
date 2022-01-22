@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="100dp"
+    android:background="#f0f0f0">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="50dp"
+            app:cardBackgroundColor="#fefefe"
+            app:cardCornerRadius="9dp"
+            android:elevation="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="30dp">
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/ll2"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:paddingHorizontal="15dp"
+                            android:text="Scanne NUR die englischen Vokabeln ein"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"/>
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="190dp"
+                            android:src="@drawable/ocr"
+                            android:layout_marginVertical="30dp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/ll1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/navScanWeiter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="30dp"
+                            android:paddingVertical="4dp"
+                            android:paddingHorizontal="18dp"
+                            app:cornerRadius="5dp"
+                            app:backgroundTint="@color/colorPrimaryDark"
+                            android:text="einscannen"
+                            android:textSize="23sp"
+                            android:textColor="#ffffff"/>
+
+                        <!--<androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="3dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/oder"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginHorizontal="25dp"
+                                android:background="#888888"
+                                />
+
+                            <TextView
+                                android:id="@+id/oder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_marginTop="40dp"
+                                android:text="oder"
+                                android:translationY="-28dp"
+                                android:textSize="35sp"/>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="3dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/oder"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginHorizontal="25dp"
+                                android:background="#888888"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingHorizontal="10dp"
+                            android:text="Bild aus Galerie verweden"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/navGalleryWeiter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingVertical="4dp"
+                            android:paddingHorizontal="18dp"
+                            app:cornerRadius="5dp"
+                            app:backgroundTint="@color/colorPrimaryDark"
+                            android:text="zur Galerie"
+                            android:textSize="23sp"
+                            android:textColor="#ffffff"/>-->
+
+                    </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

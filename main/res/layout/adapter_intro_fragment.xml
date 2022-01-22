@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/info_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/intro_scanq"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginVertical="60dp"
+                android:textSize="32sp"
+                android:textColor="#066770"
+                android:textStyle="bold"
+                android:text="@string/willkommen_bei_scanq" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:gravity="center_horizontal"
+                android:text="@string/noch_ein_paar_kleine_hinweise_bevor_es_losgeht"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/arrow_right"
+                android:layout_marginTop="50dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_ll2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="27sp"
+                android:textColor="#066770"
+                android:textStyle="italic"
+                android:text="... Vokaben einfach einscannen, ..." />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:src="@drawable/ocr"
+                android:layout_marginVertical="60dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#737878"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:textSize="24sp"
+                android:text="kein lästiges Eintippen mehr"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/intro_no_keyboard"
+                android:layout_marginTop="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_ll3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="27sp"
+                android:textColor="#066770"
+                android:textStyle="italic"
+                android:text="... übersichtliche Vokabellisten nutzen ..." />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:src="@drawable/intro_voc_liste"
+                android:layout_marginVertical="60dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#737878"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:textSize="20sp"
+                android:text="Hier kannst du deine Vokabeln auch bearebiten, ergänzen und löschen"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_ll4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:src="@drawable/intro_quiz" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginVertical="60dp"
+                android:textSize="27sp"
+                android:textColor="#066770"
+                android:textStyle="italic"
+                android:text="... &amp; Vokaben in unterschiedlichen Quiz lernen."/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#737878"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:textSize="20sp"
+                android:text="@string/intro_quiz_arten"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_ll5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/intro_finally"
+                android:layout_marginBottom="40dp"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="27sp"
+                android:textColor="#066770"
+                android:textStyle="italic"
+                android:text="Zum Schluss noch eine Kleinigkeit:"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:textSize="23sp"
+                android:text="Gib bitte deinen Namen ein"/>
+
+            <EditText
+                android:id="@+id/into_name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:hint=" z.B. Sirius"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/intro_finish_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="6dp"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:text="los geht's"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

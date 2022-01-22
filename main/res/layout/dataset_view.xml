@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*">
+
+    <TableRow
+        android:layout_marginVertical="2dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:longClickable="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewZeile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            app:cardBackgroundColor="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/zeile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:textColor="@color/colorText" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewZeile2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            app:cardBackgroundColor="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/zeile2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:textColor="@color/colorText" />
+
+        </androidx.cardview.widget.CardView>
+    </TableRow>
+</TableLayout>

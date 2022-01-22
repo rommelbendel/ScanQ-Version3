@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".Einscannen">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="80dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/header"
+                        android:layout_width="376dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/vokabeln"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25sp" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/tabelleVocScroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/tableCardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="14dp"
+                                app:cardBackgroundColor="#3B9875"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="10dp"
+                                android:visibility="visible">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    app:cardBackgroundColor="#B8FBE2"
+                                    app:cardElevation="0dp"
+                                    app:cardCornerRadius="10dp">
+
+                                    <ViewSwitcher
+                                        android:id="@+id/tableSwitcher"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/tabelleVocView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:nestedScrollingEnabled="false"
+                                            android:padding="12dp"
+                                            tools:listitem="@layout/dataset" />
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/tabelleVoc"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:nestedScrollingEnabled="false"
+                                            android:padding="12dp"
+                                            tools:listitem="@layout/dataset" />
+
+                                    </ViewSwitcher>
+
+
+                                    <!--
+                                    <TableLayout
+                                        android:id="@+id/vocabTable"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="fill_parent"
+                                        android:padding="12dp"
+                                        android:stretchColumns="*"
+                                        android:shrinkColumns="*">
+                                    </TableLayout>
+                                    -->
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ViewSwitcher
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/toolbar_background"
+        android:clickable="true"
+        android:contentDescription="@string/bearbeiten"
+        android:focusable="true"
+        android:scaleType="fitXY">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/editButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                app:lottie_rawRes="@raw/edit"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/addButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                app:lottie_rawRes="@raw/add_circle"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/saveButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:backgroundTint="#2D2F31"
+                android:clickable="true"
+                android:contentDescription="@string/bearbeiten"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_tick"/>
+
+            <ImageButton
+                android:id="@+id/cancelButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:backgroundTint="#2D2F31"
+                android:clickable="true"
+                android:contentDescription="@string/neu"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cancel"/>
+        </LinearLayout>
+    </ViewSwitcher>
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/bmb_voc_tabelle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="19.2dp"
+        android:layout_marginEnd="1.6dp"
+        app:bmb_buttonEnum="ham"
+        app:bmb_hamWidth="0dp"
+        app:bmb_piecePlaceEnum="piecePlace_ham_2"
+        app:bmb_buttonPlaceEnum="buttonPlace_ham_2"
+        app:bmb_normalColor="@android:color/transparent"
+        app:bmb_shadowRadius="0dp"
+        app:bmb_backgroundEffect="true"/>
+
+    <View
+        android:id="@+id/shadow_datenausgabe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70D8DDDB"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

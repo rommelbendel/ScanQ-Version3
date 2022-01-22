@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/waiting_create"
+        android:visibility="gone"
+        layout="@layout/nav_wait_for_you_to_join"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/content_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/heading_online_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    android:text="neues Spiel erstellen"/>
+
+                <TableLayout
+                    android:id="@+id/table_settings_online_create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginHorizontal="30dp">
+
+                    <TableRow
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quiz"
+                            android:textSize="19sp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginEnd="25dp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_online_quiz"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textAlignment="textStart" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Kategorie"
+                            android:textSize="19sp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginEnd="25dp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_online_category"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textAlignment="textStart"
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vokabeln"
+                            android:textSize="19sp"
+                            android:textColor="@color/colorPrimary" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:textAlignment="center">
+
+                            <SeekBar
+                                android:id="@+id/slider_online_voc_amount"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="15dp"
+                                android:min="4"
+                                android:max="25" />
+
+                            <TextView
+                                android:id="@+id/online_voc_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_0"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <View
+                    android:id="@+id/separation_line_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="30dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#BABFBE" />
+
+                <TextView
+                    android:id="@+id/text_select_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:textSize="19sp"
+                    android:textAlignment="textStart"
+                    android:text="Such dir einen Beitrittscode aus:"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_code_create"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_code_create"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:inputType="numberPassword"
+                        android:hint=" z.B. 3107" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="13dp"
+                    android:paddingVertical="4dp"
+                    app:iconTint="#ffffff"
+                    app:icon="@drawable/ic_join"
+                    app:iconSize="25dp"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:text=" starten" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

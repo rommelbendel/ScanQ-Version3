@@ -1,0 +1,87 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <PreferenceCategory app:title="Allgemeines">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="personal"
+            app:title="persönliche Begrüßung"
+            app:defaultValue="true"/>
+
+        <SwitchPreferenceCompat
+            app:key="cats"
+            app:title="Kategorien auf Home Screen"
+            app:summary="@string/Kategorie_Bubbles"
+            app:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Einscannen">
+
+        <SwitchPreferenceCompat
+            app:key="lowercase"
+            app:title="Englische Vokabeln automatisch klein schreiben"
+            app:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Quiz-Einstellungen">
+
+        <SwitchPreferenceCompat
+            app:key="quiz_sounds"
+            app:title="Quiz-Sounds"
+            app:defaultValue="true"/>
+
+        <DropDownPreference
+            app:key="accent"
+            app:title="Aussprache (Spracheingabe)"
+            app:summary="Welchen englischen Akzent verwendest du bevorzugt?"
+            app:entries="@array/accents"
+            app:useSimpleSummaryProvider="true"
+            android:entryValues="@array/accents_values"/>
+
+    </PreferenceCategory>
+
+    <!--PreferenceCategory
+        app:title="Online Multiplayer"
+        app:enabled="false">
+
+        <PreferenceScreen
+            android:title="demnächst verfügbar..."
+            app:enabled="false"/>
+
+    </PreferenceCategory-->
+
+    <PreferenceCategory app:title="Blindenmodus">
+
+        <SwitchPreferenceCompat
+            app:key="visually_impaired"
+            app:title="Blindenmodus aktivieren"
+            app:summary="Aktiviert eine blindengerechte Steuerung der App"
+            app:defaultValue="false"/>
+
+        <SwitchPreferenceCompat
+            app:key="use_keyword"
+            app:title="Aktivierungswort statt Doppeltipp verwenden"
+            app:defaultValue="true"
+            app:enabled="false"
+            tools:visiblility="gone"/>
+
+        <EditTextPreference
+            app:key="keyword"
+            app:title="Aktivierungswort"
+            app:summary="Mit diesem Wort werden Sprachbefehle im Blindenmodus eingeleitet"
+            app:defaultValue="Trainer"
+            app:enabled="false"
+            tools:visiblility="gone"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

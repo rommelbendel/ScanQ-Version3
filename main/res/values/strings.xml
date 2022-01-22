@@ -1,0 +1,186 @@
+<resources>
+    <string name="app_name">ScanQ</string>
+
+    <string name="text_button_activity_main">prüfen</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="shortcut_disabled">Shortcut deaktiviert</string>
+    <string name="shortcut_quiz">Quiz spielen</string>
+    <string name="shortcut_vocs">Vokabelübersicht</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="galerie">Galerie</string>
+    <string name="kamera">Kamera</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="eingabe_1">Name</string>
+    <string name="textview1">TextView</string>
+    <string name="ergebnis">Ergebnis</string>
+    <string name="bild_hinzuf_gen">Bild hinzufügen</string>
+    <string name="weiteres">weiteres</string>
+    <string name="scanq">ScanQ</string>
+    <string name="title_activity_einstellung">Einstellung</string>
+    <string name="formatierung_datenausgabe">%s | %s</string>
+    <string name="leere_datenbank_fehlermeldung">Es sind noch keine Vokabeln vorhanden</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Überschrift 1</string>
+    <string name="sync_header">Überschrift 2</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Dein Name</string>
+    <string name="reply_title">Auswahl Einstellung</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Schalter Einstellung</string>
+    <string name="attachment_title">potentielle Einstellung</string>
+    <!--string name="attachment_summary_on">zusätzliche Erklärung unterhalb einer Einstellung für Fall 2</string>
+    <string name="attachment_summary_off">zusätzliche Erklärung unterhalb einer Einstellung für Fall 1</string-->
+    <string name="bild_vorschau">Bild Vorschau</string>
+    <string name="hier_steht_gleich_dein_ergebnis">Hier steht gleich dein Ergebnis…</string>
+    <string name="home">home</string>
+    <string name="aufgabe">Aufgabe</string>
+    <string name="neu">neu</string>
+    <string name="einstellungen">Einstellungen</string>
+    <string name="titelbild">TitelBild</string>
+    <string name="brauchst_du_hilfe">Brauchst du Hilfe ?</string>
+    <string name="faq">FAQ</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="emptyspaceneu">Neu</string>
+    <string name="quiz">Quiz</string>
+    <string name="dateien">Dateien</string>
+    <string name="anzeigen">anzeigen</string>
+    <string name="l_schen">löschen</string>
+    <string name="bez_speichern">speichern</string>
+    <string name="aendern">ändern</string>
+    <string name="previous_button">previous Button</string>
+    <string name="next_button">next Button</string>
+    <string name="_0">0</string>
+    <string name="appicon">AppIcon</string>
+    <string name="datenbank">Datenbank</string>
+    <string name="Englisch">Englisch</string>
+    <string name="Deutsch">Deutsch</string>
+    <string name="Kategorie">Kategorie</string>
+    <string name="neue_vokabel">neue Vokabel</string>
+    <string name="markiert">markiert</string>
+    <string name="abbrechen">abbrechen</string>
+    <string name="gratualtion">Gratulation!</string>
+    <string name="unentschieden">Unentschieden!</string>
+    <string name="du_hast">Du hast…</string>
+    <string name="_2_fragen_richtig">2 Fragen richtig</string>
+    <string name="_0_fragen_falsch">0 Fragen falsch</string>
+    <string name="geloest">gelöst!</string>
+    <string name="ton_aus">ton aus</string>
+    <string name="aufnehmen">aufnehmen</string>
+    <string name="warte_auf_spracheingabe">warte auf Spracheingabe…</string>
+    <string name="bearbeiten">bearbeiten</string>
+    <string name="was_bedeutet">Was bedeutet…</string>
+    <string name="Appmodi">Appmodi</string>
+    <string name="blindenmodus">Blindenmodus</string>
+    <string name="exitHint">Zum Beenden gedrückt halten</string>
+    <string name="up">up</string>
+    <string name="down">down</string>
+    <string name="union_jack">union jack</string>
+    <string name="pruefen">prüfen</string>
+    <string name="bersetze_deutsche_n_vokabeln">Übersetze deutsche \n Vokabeln</string>
+    <string name="play">play</string>
+    <string name="bersetze_englische_n_vokabeln">Übersetze englische \n Vokabeln</string>
+    <string name="w_hle_aus_4_m_glichkeiten">Wähle aus 4 \nmöglichen Antworten</string>
+    <string name="multiple_choice">Multiple Choice</string>
+    <string name="flag">Flag</string>
+    <string name="uebersetzte_folgedes">Übersetze Folgendes:</string>
+    <string name="food">food</string>
+    <string name="loesung">Lösung</string>
+    <string name="richtig">Richtig</string>
+    <string name="food_essen">food = Essen</string>
+    <string name="falsch">Falsch</string>
+    <string name="essen_food">Essen = food</string>
+    <string name="das_essen">(das) Essen</string>
+    <string name="solution">solution</string>
+    <string name="wrong">wrong</string>
+    <string name="right">right</string>
+    <string name="translate_the_following">translate the following:</string>
+    <string name="check">check</string>
+    <string name="correct">correct</string>
+    <string name="gel_st">gelöst!</string>
+    <string name="wiederholen">wiederholen</string>
+    <string name="einscannen">Einscannen</string>
+
+    <string name="quiz_einstellungen">Quiz-Einstellungen</string>
+    <string name="vokabeln">Vokabeln</string>
+    <string name="gemischt">gemischt</string>
+    <string name="nur_ungelernte_Vokabeln">Nur ungelernte Vokabeln</string>
+    <string name="start">start</string>
+    <string name="waehle_eine_kategorie">Wähle eine Kategorie</string>
+    <string name="daten_werden_geladen">Daten werden geladen…</string>
+    <string name="name">Name</string>
+    <string name="neue_kategorie">neue Kategorie</string>
+    <string name="alle_vokabeln">Alle Vokabeln</string>
+    <string name="deutsche_flagge">deutsche Flagge</string>
+    <string name="keine_kategorien_vorhanden">Keine Kategorien vorhanden</string>
+    <string-array name="QuizModeDropDown_Array">
+        <item>Eingabe DE</item>
+        <item>Eingabe ENG</item>
+        <item>Multiple-Choice DE</item>
+        <item>Multiple-Choice ENG</item>
+        <item>Spracheingabe</item>
+    </string-array>
+    <string-array name="CategoryDropDown_Array">
+        <item>Kategorie 1</item>
+        <item>Kategorie 2</item>
+        <item>Kategorie 3</item>
+    </string-array>
+    <string name="Kategorie_Bubbles">Bis zu 10 deiner neuesten Kategorien auf dem Homescreen <i>(empfohlen)</i></string>
+    
+    <!--  App Intro -->
+    <!--string name="title_1">test 1</string>
+    <string name="title_2">test 2</string>
+    <string name="title_3">test 3</string>
+    <string name="title_4">test 4</string>
+    <string name="text">random content</string-->
+    <string name="noch_ein_paar_kleine_hinweise_bevor_es_losgeht">Hiermit kannst du…</string>
+    <string name="willkommen_bei_scanq">Willkommen bei ScanQ</string>
+    <string name="intro_quiz_arten">Du hast die Wahl zwischen <br/>Sprach-, Multiple-Choice- &amp; Eingabe-Spielen</string>
+    <string name="topic_sve_method">Wie möchtest du die Vokabeln speichern ?</string>
+    <string name="schade">Schade</string>
+    <string name="quiz_vorschau">quiz_vorschau</string>
+    <string name="berpr_fen">überprüfen</string>
+    <string name="hurra_deine_vokaben_sind_eingescannt_schaue_bitte_nochmal_nach_ob_alles_richt">Hurra, deine Vokabeln sind eingescannt!<br/> Schaue bitte nochmal nach, ob alles richtig erkannt wurde.</string>
+
+    <string name="statistiken">Statistiken</string>
+    <string name="du_hast_vokabeln_in_den_letzten_7_tagen_gelernt">Du hast Vokabeln in den letzten 7 Tagen gelernt.</string>
+    <string name="durchschnittlich_hast_du_vokabeln_pro_tag_gelernt">Durchschnittlich hast du Vokabeln pro Tag gelernt.</string>
+    <string name="vokabeln_in_dieser_kategorie">Vokabeln in dieser Kategorie</string>
+    <string name="lernstand">Lernstand</string>
+    <string name="_7_tage_verlauf">7-Tage Verlauf</string>
+    <string name="send_to">senden an</string>
+    <string name="gestern">GESTERN</string>
+    <string name="heute">HEUTE</string>
+    <string name="vokabeln_ungelernt">Vokabeln ungelernt</string>
+    <string name="ungelernt">UNGELERNT</string>
+    <string name="neue_kategorie_erstellen">neue Kategorie erstellen</string>
+    <string name="less_then_10_vocs">Hier stehen bald <i>alte Vokabeln</i>, die du vielleicht wiederholen möchtest.<br/> Füge dazu einfach mehr als <i>10 Vokabeln</i> in der App hinzu.</string>
+    <string name="no_cats">Du hast noch keine Kategorien. Sobald du welche hinzufügst, werden sie dir hier erscheinen.</string>
+    <string name="deine_kategorien">Deine Kategorien</string>
+    <string name="good">gut gelernte Vokabeln</string>
+    <string name="bad">schlecht gelernte Vokabeln</string>
+    <string name="unlearned">ungespielte Vokabeln</string>
+
+    <string-array name="accents">
+        <item>britisch</item>
+        <item>US-amerikanisch</item>
+        <item>indisch</item>
+        <item>australisch</item>
+    </string-array>
+    <string-array name="accents_values">
+        <item>GB</item>
+        <item>US</item>
+        <item>IN</item>
+        <item>AU</item>
+    </string-array>
+</resources>

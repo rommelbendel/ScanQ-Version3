@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_bound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_bound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_bound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/left_bound"
+        app:layout_constraintTop_toBottomOf="@id/top_bound"
+        app:layout_constraintRight_toLeftOf="@id/right_bound"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:scrollbars="none">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            app:cardCornerRadius="3dp"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statistiken"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimary"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:stretchColumns="1">
+                            <TableRow
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:text="@string/Kategorie"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/colorPrimary"/>
+                                <Spinner
+                                    android:id="@+id/categorySelection"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"/>
+                            </TableRow>
+                        </TableLayout>
+
+                        <TextView
+                            android:id="@+id/numberOfVocabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/vokabeln_in_dieser_kategorie"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorPrimary"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="#BABFBE"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="22sp"
+                            android:text="@string/lernstand"
+                            android:textColor="@color/colorPrimary"/>
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/pieChartRightWrong"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:clickable="true"
+                            android:focusable="true"/>
+
+                        <!--ImageButton
+                            android:id="@+id/sharePieChart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimary4"
+                            android:src="@android:drawable/ic_menu_share"
+                            android:tint="#FFFFFF"
+                            android:clickable="true"
+                            android:focusable="true"/-->
+
+                        <!--com.nightonke.boommenu.BoomMenuButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:bmb_piecePlaceEnum="piecePlace_share"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="5dp"
+                            app:bmb_normalColor="@color/colorAccent"
+                            app:bmb_buttonEnum="textOutsideCircle"
+                            app:bmb_buttonPlaceEnum="buttonPlace_sc_6_3"/-->
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/barChartRightWrong"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"/>
+
+                        <View
+                            android:id="@+id/contentSeparator2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="#BABFBE"/>
+
+                        <TextView
+                            android:id="@+id/trained7Days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/du_hast_vokabeln_in_den_letzten_7_tagen_gelernt"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="20dp"/>
+
+                        <TextView
+                            android:id="@+id/averageTraining7Days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/durchschnittlich_hast_du_vokabeln_pro_tag_gelernt"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="20dp"/>
+
+                        <TextView
+                            android:id="@+id/header7Days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="22sp"
+                            android:text="@string/_7_tage_verlauf"
+                            android:textColor="@color/colorPrimary"/>
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/lineChartTrainingHistory"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"/>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

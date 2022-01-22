@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".Einscannen"
+    tools:ignore="MissingClass">
+
+    <include
+        android:id="@+id/navMethod"
+        android:visibility="gone"
+        layout="@layout/nav_method"/>
+
+    <include
+        android:id="@+id/navMethodD"
+        android:visibility="gone"
+        layout="@layout/nav_method_de"/>
+
+    <include
+        android:id="@+id/navMethodTopic"
+        android:visibility="gone"
+        layout="@layout/nav_method_set_topic"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/tabelleVocScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hinweis_tabelle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="20dp"
+                app:cardBackgroundColor="#323333"
+                app:cardCornerRadius="7dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/headingDataset"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:textAlignment="center"
+                    android:text="@string/hurra_deine_vokaben_sind_eingescannt_schaue_bitte_nochmal_nach_ob_alles_richt"
+                    android:textColor="#C9CCCB"
+                    android:textSize="20sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tableCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                app:cardBackgroundColor="#3B9875"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="10dp"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    app:cardBackgroundColor="#B8FBE2"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tabelleVoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:padding="12dp"
+                        tools:listitem="@layout/dataset" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TableLayout
+                android:id="@+id/tableButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:shrinkColumns="*"
+                android:visibility="gone">
+
+                <TableRow
+                    android:gravity="center_horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loeschen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="4dp"
+                        android:paddingHorizontal="19dp"
+                        android:text="@string/l_schen"
+                        android:textColor="#fff"
+                        android:textSize="21sp"
+                        app:backgroundTint="@color/colorPrimaryDark" />
+
+                    <com.google.android.material.button.MaterialButton
+                    android:id="@+id/speichern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="19dp"
+                    android:text="@string/bez_speichern"
+                    android:textColor="#fff"
+                    android:textSize="21sp"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/note_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="20dp"
+                    app:cardBackgroundColor="#323333"
+                    app:cardCornerRadius="7dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/headingBoundinBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:textAlignment="center"
+                        android:text="Entferne bitte alle Lautschriften, Überschriften und alles andere, was du nicht einscannen willst. Klicke dafür einfach auf die entsprechenden Wörter."
+                        android:textColor="#C9CCCB"
+                        android:textSize="20sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/bildVorschau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/bild_vorschau"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/speichern1"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="4dp"
+                    android:text="@string/bez_speichern"
+                    android:textColor="#fff"
+                    android:textSize="21sp"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef">
+
+    <include
+        android:id="@+id/waiting"
+        android:visibility="gone"
+        layout="@layout/nav_wait_for_you_to_join"/>
+
+    <include
+        android:id="@+id/waiting_end"
+        android:visibility="gone"
+        layout="@layout/nav_wait_to_end_turn"/>
+
+    <include
+        android:id="@+id/online_result_card"
+        layout="@layout/nav_result_card_online" />
+
+    <include
+        android:id="@+id/player_left"
+        android:visibility="gone"
+        layout="@layout/nav_player_left" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/resultCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottombar2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="50dp"
+        app:cardElevation="22dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/succsessOrLoss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="55sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/du_hast"
+                android:textAlignment="center"
+                android:textSize="38sp" />
+
+            <TextView
+                android:id="@+id/countRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/_2_fragen_richtig"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/countWrong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/_0_fragen_falsch"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/gel_st"
+                android:textAlignment="center"
+                android:textSize="38sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/restart1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="7dp"
+                    android:text="zurück"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/questionCard1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="#ffffff"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/verticalGuide"
+                android:src="@drawable/german_flag"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/deutsche_flagge" />
+            <TextView
+                android:id="@+id/questionE"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/uebersetzte_folgedes"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintTop_toTopOf="@+id/verticalGuide"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/voc"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/questionE"
+                android:textAlignment="center"
+                android:textSize="35sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/quiz_anim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                app:lottie_rawRes="@raw/confetti"
+                app:lottie_loop="false"
+                app:lottie_autoPlay="false"
+                android:translationY="-50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/loesungEBox"
+                app:layout_constraintBottom_toBottomOf="@id/loesungEBox"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/loesungEBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/voc"
+                app:layout_constraintBottom_toTopOf="@id/verticalGuide2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginHorizontal="60dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loesung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:inputType="textVisiblePassword"
+                    android:hint="@string/loesung" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loesungEBox"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/pruefen"
+                android:textColor="#ffffff"
+                app:cornerRadius="5dp"
+                android:textSize="22sp"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/richtig"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                app:cardBackgroundColor="#96d84f"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loesungEBox"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/solution_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="45dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/richtig"
+                        android:textAlignment="center"
+                        android:textColor="#426e13"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/solution_text_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="45dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/food_essen"
+                        android:textAlignment="center"
+                        android:textColor="#426e13"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/falsch"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                app:cardBackgroundColor="#a94747"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loesungEBox"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/solution_wrong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="45dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/falsch"
+                        android:textAlignment="center"
+                        android:textColor="#450909"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/solution_text_wrong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="45dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/food_essen"
+                        android:textAlignment="center"
+                        android:textColor="#450909"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.35" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalGuide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.80" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottombar2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        app:elevation="20dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/quizleft"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/quizleft"
+            android:contentDescription="@string/previous_button" />
+
+        <ImageButton
+            android:id="@+id/quizright"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/quizright"
+            android:contentDescription="@string/next_button" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/points_cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#7fbfbf"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottombar2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottombar2">
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/_0"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="8dp"
+            android:drawablePadding="5dp"
+            app:drawableEndCompat="@drawable/quizpoints" />
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

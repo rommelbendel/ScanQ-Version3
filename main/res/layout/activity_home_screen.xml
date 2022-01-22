@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="79.5dp"
+                android:background="@color/colorPrimary"
+                app:layout_collapseMode="pin"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="0dp"
+                android:elevation="0dp"
+                app:cardMaxElevation="0dp">
+
+            </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hello_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                android:textColor="#4F5151"
+                android:fontFamily="sans-serif-medium"
+                android:text="Hallo ..."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#BABFBE"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="30dp"
+                app:cardCornerRadius="4dp"
+                android:elevation="20dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/untrained_vocabs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:text="Du hast noch keine Vokabeln"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="20dp">
+
+                            <ImageView
+                                android:id="@+id/icon_online"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="20dp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/split_quiz"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/quiz_online"
+                                android:src="@drawable/ic_planet"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/icon_offline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ic_trophy"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/split_quiz"
+                                app:layout_constraintBottom_toTopOf="@id/quiz_offline"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+
+                           <com.google.android.material.button.MaterialButton
+                               android:id="@+id/quiz_offline"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               app:layout_constraintLeft_toLeftOf="parent"
+                               app:layout_constraintRight_toLeftOf="@id/split_quiz"
+                               app:layout_constraintTop_toBottomOf="@id/icon_offline"
+                               app:layout_constraintBottom_toBottomOf="parent"
+                               app:backgroundTint="@color/colorPrimary"
+                               android:layout_marginVertical="20dp"
+                               android:paddingHorizontal="13dp"
+                               android:paddingVertical="8dp"
+                               android:textSize="18sp"
+                               android:textColor="@color/white"
+                               android:text="offline"/>
+
+                            <View
+                                android:id="@+id/split_quiz"
+                                android:layout_width="0.5dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/white"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/quiz_online"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/split_quiz"
+                                app:layout_constraintTop_toBottomOf="@id/icon_online"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:backgroundTint="@color/colorPrimary"
+                                android:layout_marginVertical="20dp"
+                                android:paddingHorizontal="13dp"
+                                android:paddingVertical="8dp"
+                                android:textSize="18sp"
+                                android:textColor="@color/white"
+                                android:text="online" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/line_for_cats"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#BABFBE"/>
+
+            <TextView
+                android:id="@+id/tv_for_cats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:textSize="19sp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/deine_kategorien"/>
+
+            <TextView
+                android:id="@+id/message_for_cats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="39dp"
+                android:text="@string/no_cats"
+                android:textSize="13.5sp"
+                android:textAlignment="center"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hv_for_cats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/ll_for_cats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="10dp"
+                    android:layout_marginHorizontal="20dp">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#BABFBE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="19sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Erinnerst du dich noch?"/>
+
+                <TextView
+                    android:id="@+id/less_10_vocs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="39dp"
+                    android:text="@string/less_then_10_vocs"
+                    android:textSize="13.5sp"
+                    android:textAlignment="center"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tableCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="14dp"
+                    app:cardBackgroundColor="#3B9875"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="10dp"
+                    android:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        app:cardBackgroundColor="#B8FBE2"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/tabelleVocView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:padding="12dp"
+                            tools:listitem="@layout/dataset" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="145dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/appname_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:text="ScanQ "
+                    android:textStyle="bold"
+                    android:textColor="#4A4A4A"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:text=" made with"
+                    android:textColor="#4D504F"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:translationY="-5.5dp"
+                    android:translationX="7dp"
+                    android:layout_marginVertical="5dp"
+                    android:src="@drawable/ic_heart"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/ic_shadow_home"
+        android:translationY="-40dp"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="bottom" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationY="-90.5dp"
+        android:background="@drawable/curve"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="bottom"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+       android:textAlignment="center"
+        android:textSize="32sp"
+        android:text="ScanQ"
+        android:textColor="@color/white"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="top"/>
+
+    <TableLayout
+        android:id="@+id/statisticsWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_gravity="center_horizontal"
+        android:stretchColumns="0, 2"
+        android:focusable="true"
+        android:clickable="true">
+        <TableRow
+            android:orientation="horizontal"
+            android:gravity="center">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/trainedYesterday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:textSize="28sp"
+                    android:text="@string/_0"/>
+                <TextView
+                    android:id="@+id/textYesterday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#257167"
+                    android:textSize="18sp"
+                    android:text="@string/gestern"/>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChartRightWrong"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                    <TextView
+                        android:id="@+id/numberOfUntrainedVocabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="32sp"
+                        android:textColor="@color/colorText"
+                        android:text="@string/_0"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/textUntrainedVocabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorText"
+                        android:text="@string/ungelernt"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/trainedToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:textSize="28sp"
+                    android:text="@string/_0"/>
+                <TextView
+                    android:id="@+id/textToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#257167"
+                    android:textSize="18sp"
+                    android:text="@string/heute"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:id="@+id/click_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        app:layout_anchorGravity="top"
+        app:layout_anchor="@id/statisticsWrapper"
+        android:layout_gravity="bottom"/>
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C376B59D"
+        android:visibility="gone"/>
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/bmb_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="5dp"
+        app:bmb_normalColor="@color/colorAccent"
+        app:bmb_buttonEnum="textOutsideCircle"
+        app:bmb_piecePlaceEnum="piecePlace_dot_6_3"
+        app:bmb_buttonPlaceEnum="buttonPlace_sc_6_3"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
